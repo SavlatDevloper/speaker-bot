@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Algorithm">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./bot.jpg">
+    <title>My Algorithm</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .h3 {
+            color: #555;
+            text-align: center;
+            font-size: 2.3rem;
+        }
+        
+        audio {
+            background-color: transparent;
+            color: transparent;
+        }
+        
+        .g3 {
+            color: rgb(221, 246, 0);
+            text-align: center;
+            font-size: 1rem;
+        }
+        
+        h1 {
+            text-align: center;
+            color: transparent;
+            font-size: 3rem;
+        }
+        
+        .input {
+            border-radius: 16px 0px;
+            display: none;
+            width: 50%;
+            height: 3rem;
+            padding-left: 1rem;
+            font-size: large;
+            margin: 0.2rem;
+            margin-left: 25%;
+            transition: 1s;
+        }
+        
+        input:focus {
+            border-radius: 0px 16px;
+            transition: 1s;
+        }
+        
+        .inputs {
+            border-radius: 16px 0px;
+            display: none;
+            width: 50%;
+            height: 3rem;
+            padding-left: 1rem;
+            font-size: large;
+            margin: 0.2rem;
+            margin-left: 25%;
+            transition: 1s;
+        }
+        
+        input:focus {
+            border-radius: 0px 16px;
+            transition: 1s;
+        }
+        
+        .main {
+            background-image: url('./imges/bot2.jpg');
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            margin-top: -3rem;
+        }
+        
+        @media (max-width:500px) {
+            body {
+                margin: 0;
+                padding: 0;
+                color: black;
+            }
+            .h3 {
+                color: crimson;
+            }
+            .main {
+                background: url('./imges/bot2.jpg');
+                background-size: cover;
+                height: 100vh;
+                width: 100%;
+            }
+        }
+        
+        .video {
+            float: left;
+            width: 30.3%;
+            margin: 0.1rem;
+            box-sizing: border-box;
+            height: 30vh;
+            display: none;
+            margin-left: 3rem;
+        }
+        
+        .videos {
+            float: left;
+            width: 30.3%;
+            margin: 0.1rem;
+            box-sizing: border-box;
+            height: 30vh;
+            display: none;
+        }
+        
+        .videoss {
+            float: left;
+            width: 30.3%;
+            margin: 0.1rem;
+            box-sizing: border-box;
+            height: 30vh;
+            display: none;
+        }
+        
+        .button {
+            width: 100%;
+            height: 30vh;
+            margin-top: -10vh;
+            background-color: transparent;
+            border: none;
+            color: transparent;
+        }
+        
+        .div {
+            display: none;
+        }
+        
+        .btnmusic {
+            width: 100%;
+            height: 30vh;
+            margin-top: -10vh;
+            background-color: transparent;
+            border: none;
+            display: none;
+            color: transparent;
+        }
+        
+        .btnclose {
+            background-color: transparent;
+            border: none;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h3 class="h3">Savlatbekning eng faxrli yutug'i</h3>
+        <h3 class="g3">Algorithm</h3>
+        <h1>A.U.F</h1>
+        <button class="button">Shower</button>
+        <button class="btnmusic">ShowerM</button>
+        <button class="btnclose">hide</button>
+        <div class="div">
+            <audio controls loop src="./audio/1.mp3"></audio>
+        </div>
+        <video controls src="./videos/video_2022-02-27_18-30-44.mp4" class="video"></video>
+        <video controls src="./videos/video_2022-02-27_18-30-49.mp4" class="videos"></video>
+        <video controls src="./videos/video_2022-02-27_18-34-12.mp4" class="videoss"></video>
+        <div class="alan-btn">
+
+        </div>
+    </div>
+    <script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+    <script>
+        var alanBtnInstance = alanBtn({
+            key: "efc476aa9a713f8bf5c4ca19784977112e956eca572e1d8b807a3e2338fdd0dc/stage",
+            onCommand: function(commandData) {
+                if (commandData.command === "go:back") {}
+            },
+            rootEl: document.getElementById("alan-btn"),
+        });
+    </script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const button = document.querySelector('.button');
+            const music = document.querySelector('.btnmusic');
+            const hide = document.querySelector('.btnclose');
+            const video = document.querySelector('.video')
+            const videos = document.querySelector('.videos')
+            const videoss = document.querySelector('.videoss')
+            const mp3 = document.querySelector('.div')
+
+            button.addEventListener('click', function() {
+                video.style.display = 'block'
+                videos.style.display = 'block'
+                videoss.style.display = 'block'
+                music.style.display = 'block'
+                mp3.style.display = 'none'
+            })
+            music.addEventListener('click', function() {
+                video.style.display = 'none'
+                videos.style.display = 'none'
+                videoss.style.display = 'none'
+                mp3.style.display = 'block'
+            })
+            hide.addEventListener('click', function() {
+                mp3.style.display = 'none'
+                video.style.display = 'none'
+                videos.style.display = 'none'
+                videoss.style.display = 'none'
+            })
+        })
+    </script>
+</body>
+
+</html>
